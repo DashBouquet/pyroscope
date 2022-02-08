@@ -4,14 +4,12 @@ import Box from '@ui/Box';
 import Icon from '@ui/Icon';
 import {
   faKey,
-  faLock,
   faSlidersH,
   faUserAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import cx from 'classnames';
 import { withCurrentUser } from '@pyroscope/redux/reducers/user';
 import Preferences from './Preferences';
-import Security from './Security';
 import Users from './Users';
 import ApiKeys from './APIKeys';
 
@@ -43,20 +41,8 @@ function Settings(props) {
             <>
               <li>
                 <NavLink
-                  to={`${url}/security`}
-                  className={(isActive) =>
-                    cx({
-                      [styles.navLink]: true,
-                      [styles.navLinkActive]: isActive,
-                    })
-                  }
-                >
-                  <Icon icon={faLock} /> Security
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
                   to={`${url}/users`}
+                  exact
                   className={(isActive) =>
                     cx({
                       [styles.navLink]: true,
@@ -70,6 +56,7 @@ function Settings(props) {
               <li>
                 <NavLink
                   to={`${url}/api-keys`}
+                  exact
                   className={(isActive) =>
                     cx({
                       [styles.navLink]: true,
@@ -90,19 +77,16 @@ function Settings(props) {
             <Route exact path={path}>
               <Preferences />
             </Route>
-            <Route exact path={`${path}/security`}>
-              <Security />
-            </Route>
             <Route exact path={`${path}/users`}>
               <Users />
             </Route>
-            <Route exact path={`${path}/users/add`}>
+            <Route exact path={`${path}/user-add`}>
               <UserAddForm />
             </Route>
             <Route exact path={`${path}/api-keys`}>
               <ApiKeys />
             </Route>
-            <Route exact path={`${path}/api-keys/add`}>
+            <Route exact path={`${path}/api-key-add`}>
               <APIKeyAddForm />
             </Route>
           </Switch>

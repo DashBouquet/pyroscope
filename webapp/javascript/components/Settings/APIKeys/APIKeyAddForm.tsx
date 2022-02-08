@@ -98,7 +98,7 @@ function APIKeyAddForm() {
               />
             </div>
             <div>
-              <Button icon={faCheck} type="submit" kind="secondary">
+              <Button icon={faCheck} type="submit" kind="primary">
                 Add API Key
               </Button>
             </div>

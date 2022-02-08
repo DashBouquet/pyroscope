@@ -57,7 +57,7 @@ function Users() {
           type="submit"
           kind="secondary"
           icon={faPlus}
-          onClick={() => history.push('/settings/users/add')}
+          onClick={() => history.push('/settings/user-add')}
         >
           Add User
         </Button>
@@ -76,12 +76,12 @@ function Users() {
         <thead>
           <tr>
             <td />
-            <th>Login</th>
-            <th>Email</th>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Updated</th>
-            <th />
+            <td>Login</td>
+            <td>Email</td>
+            <td>Name</td>
+            <td>Role</td>
+            <td>Updated</td>
+            <td />
           </tr>
         </thead>
         <tbody>

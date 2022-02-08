@@ -50,11 +50,7 @@ export default function Sidebar2() {
   // so we must set it up manually
   // https://github.com/azouaoui-med/react-pro-sidebar/issues/84
   const isRouteActive = function (route: string) {
-    if (route === '/') {
-      return pathname === route;
-    }
-
-    return pathname.startsWith(route);
+    return pathname === route;
   };
 
   React.useLayoutEffect(() => {
@@ -71,7 +67,8 @@ export default function Sidebar2() {
     isRouteActive('/adhoc-single') ||
     isRouteActive('/adhoc-comparison') ||
     isRouteActive('/adhoc-comparison-diff');
-  const isSettingsActive = isRouteActive('/settings');
+  const isSettingsActive =
+    isRouteActive('/settings') || isRouteActive('/settings/*');
 
   const adhoc = (
     <SubMenu

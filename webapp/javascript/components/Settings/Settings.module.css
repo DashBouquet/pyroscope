@@ -31,9 +31,13 @@
   left: 0px;
   right: 0px;
   height: 4px;
-  bottom: 6px;
   border-radius: 2px;
-  background: rgb(0, 116, 217);
+  bottom: 6px;
+  background: linear-gradient(
+    270deg,
+    rgb(245, 95, 62) 0%,
+    rgb(255, 136, 51) 100%
+  );
 }
 
 h1 {
