@@ -58,7 +58,7 @@ function EditRoleDropdown(props) {
 
 function DeleteButton(props) {
   return (
-    <Button type="button" kind="danger">
+    <Button type="button" kind="secondary">
       <Icon icon={faTrashAlt} />
     </Button>
   );
