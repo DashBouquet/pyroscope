@@ -21,6 +21,8 @@ import AdhocComparisonDiff from './components/AdhocComparisonDiff';
 import ServerNotifications from './components/ServerNotifications';
 // since this style is practically all pages
 import '@pyroscope/flamegraph/dist/index.css';
+// global css variables
+// import './variables.css';
 
 import history from './util/history';
 
